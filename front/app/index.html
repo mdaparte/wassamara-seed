@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html ng-app="raquetes">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title set in pageTitle directive -->
+    <title>RAQUETES</title>
+
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+
+    <!-- BOWER:CSS -->
+    <link rel="stylesheet" href="packages/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="packages/angular-bootstrap/ui-bootstrap-csp.css">
+    <!-- ENDBOWER -->
+
+    <!-- CUSTOM CSS -->
+	<link rel="stylesheet" href="styles/custom.css">
+    <!-- END CUSTOM CSS -->
+
+    <!-- endbuild -->
+</head>
+
+<body ng-controller="ApplicationController">
+    <!-- Simple splash screen-->
+    <div class="splash">
+        <!--<div class="color-line"></div>-->
+        <div class="splash-title">
+            <h4>Aguarde um momento.</h4>
+		</div>
+    </div>
+    <!--[if lt IE 7]>
+        <p class="alert alert-danger">Você está usando um browser <strong>muito antigo</strong>. Por favor<a href="http://browsehappy.com/">atualize o seu browser</a> para melhorar a sua experiência como usuário.</p>
+    <![endif]-->
+    <!-- Page view wrapper -->
+    <div ui-view autoscroll="true"></div>
+
+    <!-- JAVASCRIPTS BOWER-->
+    <script src="packages/jquery/dist/jquery.min.js"></script>
+    <script src="packages/lodash/dist/lodash.min.js"></script>
+    <script src="packages/moment/min/moment-with-locales.min.js"></script>
+    <script src="packages/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="packages/angular/angular.js"></script>
+    <script src="packages/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="packages/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="packages/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="packages/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="packages/restangular/dist/restangular.min.js"></script>
+
+
+
+    <!-- endbuild -->
+    <!-- SCRIPTS DA APLICACAO-->
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+
+    <script src="min/code.js"></script>
+    <!-- FIM SCRIPTS DA APLICAÇÃO -->
+</body>
+
+</html>

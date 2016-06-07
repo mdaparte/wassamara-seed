@@ -1,0 +1,26 @@
+{
+  "name": "wassamara-raquetes",
+  "description": "server side para funcionalidades do do wassamara-raquetes",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^2.8.2",
+    "body-parser": "^1.9.0",
+    "bookshelf": "^0.7.9",
+    "browser-logger": "^1.0.0",
+    "express": "3.x",
+    "express-crud": "^4.0.0",
+    "jwt-simple": "^0.2.0",
+    "knex": "^0.7.3",
+    "moment": "^2.8.3",
+    "moment-timezone": "^0.4.0",
+    "node-schedule": "^0.2.9",
+    "node-uuid": ">=1.4.1",
+    "pg": ">=3.4.4",
+    "qr-image": "^3.1.0",
+    "request": "^2.55.0",
+    "ring": "^2.0.1",
+    "serve-static": "^1.8.1",
+    "underscore": "^1.8.3"
+  }
+}

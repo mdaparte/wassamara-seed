@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Raquetes</title>
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="retirada.html">Retirada</a></li>
+                <li><a href="jogadores.html">Jogadores</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Outros <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Ricardo Dipold <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Meus Dados</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+                <!--
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                -->
+            </ul>
+
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #ccc;">
+        <div class="col-lg-2">
+            <img src="static/imgs/peter-ting.jpeg" class="img-thumbnail img-circle img-responsive"/>
+        </div>
+
+        <div class="col-lg-6">
+            <h1>Pedido #230188</h1>
+
+            <h3>Jogador Peter Ting </h3>
+            <h4>(11) 98076-0088 | wassamara@gmail.com</h4>
+        </div>
+
+        <div class="col-lg-4">
+            <div style="border:1px dotted #ccc; border-radius:10px; padding:20px 30px 30px 30px;">
+                <h4>Status</h4>
+                Se está pago<br/>
+                qtde entregue, etc
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row" id="raquete-rx"
+         style="display:none; border-left:8px solid #0088cc; margin-bottom:40px; padding-bottom:20px; border-bottom:1px solid #ccc; padding-top:10px;">
+
+        <div class="col-lg-7">
+            <h3 style="margin-top:0px;">Raquete #x</h3>
+
+            <h4>MARCA a definir - MODELO a definir - GRIP a definir</h4>
+
+            <strong>MAINS:</strong> a definir
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>CROSSES:</strong> a definir
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>Qtde de nós:</strong> a definir |
+            <strong>Horário Encordoamento:</strong> a definir<br/>
+            <strong>Stencil Raquete:</strong> a definir |
+            <strong>Stencil Corda:</strong> a definir
+            <br/>
+
+        </div>
+
+        <div class="col-lg-5">
+            <h3 style="margin-top:0px;">Extras</h3>
+            <strong>Encordoador:</strong> a definir<br/>
+
+
+            <h3>Entrega</h3>
+            <h4>
+                <span class="label label-default">a definir</span>
+                <span class="label label-default">a definir</span>
+            </h4>
+        </div>
+
+
+        <div class="col-lg-12">
+            <hr/>
+            <button class="btn btn-xs btn-success" onclick="javascript:fnc_Show('#raquete-rx-copia');">+</button>
+
+            <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-r1">Formulário Completo</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-raquete">Raquete</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-corda">Corda</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-extras">Extras</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-entrega">Entrega</button>
+            <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-r1-custom">Customização
+            </button>
+
+            <button class="btn btn-xs btn-warning" onclick="javascript:fnc_Hide('#raquete-rx')">REMOVER RAQUETE</button>
+        </div>
+    </div>
+
+
+    <div class="row" id="raquete-rx-copia"
+         style="display:none; border-left:8px solid #0088cc; margin-bottom:40px; padding-bottom:20px; border-bottom:1px solid #ccc; padding-top:10px;">
+
+        <div class="col-lg-7">
+            <h3 style="margin-top:0px;">Raquete #x COPIA</h3>
+
+            <h4>MARCA a definir - MODELO a definir - GRIP a definir</h4>
+
+            <strong>MAINS:</strong> a definir
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>CROSSES:</strong> a definir
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>Qtde de nós:</strong> a definir |
+            <strong>Horário Encordoamento:</strong> a definir<br/>
+            <strong>Stencil Raquete:</strong> a definir |
+            <strong>Stencil Corda:</strong> a definir
+            <br/>
+
+        </div>
+
+        <div class="col-lg-5">
+            <h3 style="margin-top:0px;">Extras</h3>
+            <strong>Encordoador:</strong> a definir<br/>
+
+
+            <h3>Entrega</h3>
+            <h4>
+                <span class="label label-default">a definir</span>
+                <span class="label label-default">a definir</span>
+            </h4>
+        </div>
+
+
+        <div class="col-lg-12">
+            <hr/>
+            <button class="btn btn-xs btn-success" onclick="javascript:fnc_Show('#raquete-rx-copia');">+</button>
+
+            <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-r1">Formulário Completo</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-raquete">Raquete</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-corda">Corda</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-extras">Extras</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-entrega">Entrega</button>
+            <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-r1-custom">Customização
+            </button>
+
+            <button class="btn btn-xs btn-warning" onclick="javascript:fnc_Hide('#raquete-rx-copia')">REMOVER RAQUETE
+            </button>
+        </div>
+    </div>
+
+
+    <div class="row" id="raquete-r1"
+         style="border-left:8px solid #a94442; margin-bottom:40px; padding-bottom:20px; border-bottom:1px solid #ccc; background:#f2dede; color:#a94442; padding-top:10px;">
+
+        <div class="col-lg-7">
+            <h3 style="margin-top:0px;">Raquete #1</h3>
+
+            <h4>YONEX - EZONE DR 98 - L3</h4>
+
+            <strong>MAINS:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>CROSSES:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>Qtde de nós:</strong> 4 (quatro) |
+            <strong>Horário Encordoamento:</strong> AM (manhã)<br/>
+            <strong>Stencil Raquete:</strong> SIM - Kirschbaum - Color Black |
+            <strong>Stencil Corda:</strong> SIM - Wilson - Color Red
+            <br/>
+
+        </div>
+
+        <div class="col-lg-5">
+            <h3 style="margin-top:0px;">Extras</h3>
+            <strong>Encordoador:</strong> Ricardo Dipold @Wilson Bayardo 01<br/>
+            <strong>Cushion:</strong> Yonex - Synthetic Leather Tour Grip - 1.5mm <span class="glyphicon glyphicon-tag"
+                                                                                        aria-hidden="true"></span><br/>
+            <strong>Overgrip:</strong> Yonex - Super Grap Overgrip - White <br/>
+            <strong>Antivibrador:</strong> Yonex - Vibration Stopper 5 - Azul <span class="glyphicon glyphicon-tag"
+                                                                                    aria-hidden="true"></span>
+
+
+            <h3>Entrega</h3>
+            <h4>
+                <span class="label label-danger">ON COURT</span>
+                <span class="label label-default">29/03 @16h00</span>
+            </h4>
+        </div>
+
+        <div class="col-lg-12">
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <h3>Customização</h3>
+            <strong>Peso:</strong> 365g | <strong>Swingweight:</strong> 362 | <strong>Equilíbrio:</strong> 32cm (6HL) |
+            <strong>Obs:</strong> Cushion de couro, overgrip.
+        </div>
+
+        <div class="col-lg-12">
+            <hr/>
+            <button class="btn btn-xs btn-success" onclick="javascript:fnc_Show('#raquete-r1-copia')">+</button>
+
+            <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-r1">Formulário Completo</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-raquete">Raquete</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-corda">Corda</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-extras">Extras</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-entrega">Entrega</button>
+            <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-r1-custom">Customização
+            </button>
+
+            <button class="btn btn-xs btn-warning" onclick="javascript:fnc_Hide('#raquete-r1')">REMOVER RAQUETE</button>
+        </div>
+    </div>
+
+
+    <div class="row" id="raquete-r1-copia"
+         style="display:none; border-left:8px solid #a94442; margin-bottom:40px; padding-bottom:20px; border-bottom:1px solid #ccc; background:#f2dede; color:#a94442; padding-top:10px;">
+
+        <div class="col-lg-7">
+            <h3 style="margin-top:0px;">Raquete #1 COPIA</h3>
+
+            <h4>YONEX - EZONE DR 98 - L3</h4>
+
+            <strong>MAINS:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>CROSSES:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>Qtde de nós:</strong> 4 (quatro) |
+            <strong>Horário Encordoamento:</strong> AM (manhã)<br/>
+            <strong>Stencil Raquete:</strong> SIM - Kirschbaum - Color Black |
+            <strong>Stencil Corda:</strong> SIM - Wilson - Color Red
+            <br/>
+
+        </div>
+
+        <div class="col-lg-5">
+            <h3 style="margin-top:0px;">Extras</h3>
+            <strong>Encordoador:</strong> Ricardo Dipold @Wilson Bayardo 01<br/>
+            <strong>Cushion:</strong> Yonex - Synthetic Leather Tour Grip - 1.5mm <span class="glyphicon glyphicon-tag"
+                                                                                        aria-hidden="true"></span><br/>
+            <strong>Overgrip:</strong> Yonex - Super Grap Overgrip - White <br/>
+            <strong>Antivibrador:</strong> Yonex - Vibration Stopper 5 - Azul <span class="glyphicon glyphicon-tag"
+                                                                                    aria-hidden="true"></span>
+
+
+            <h3>Entrega</h3>
+            <h4>
+                <span class="label label-danger">ON COURT</span>
+                <span class="label label-default">29/03 @16h00</span>
+            </h4>
+        </div>
+
+        <div class="col-lg-12">
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <h3>Customização</h3>
+            <strong>Peso:</strong> 365g | <strong>Swingweight:</strong> 362 | <strong>Equilíbrio:</strong> 32cm (6HL) |
+            <strong>Obs:</strong> Cushion de couro, overgrip.
+        </div>
+
+        <div class="col-lg-12">
+            <hr/>
+            <button class="btn btn-xs btn-success" onclick="javascript:fnc_Show('#raquete-r1-copia')">+</button>
+
+            <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-r1">Formulário Completo</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-raquete">Raquete</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-corda">Corda</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-extras">Extras</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-entrega">Entrega</button>
+            <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-r1-custom">Customização
+            </button>
+
+            <button class="btn btn-xs btn-warning" onclick="javascript:fnc_Hide('#raquete-r1-copia')">REMOVER RAQUETE
+            </button>
+        </div>
+    </div>
+
+
+    <div class="row" id="raquete-r2"
+         style="border-left:8px solid #0088cc; margin-bottom:40px; padding-bottom:20px; border-bottom:1px solid #ccc; padding-top:10px;">
+
+        <div class="col-lg-7">
+            <h3 style="margin-top:0px;">Raquete #2</h3>
+
+            <h4>YONEX - EZONE DR 98 - L3</h4>
+
+            <strong>MAINS:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>CROSSES:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>Qtde de nós:</strong> 4 (quatro) |
+            <strong>Horário Encordoamento:</strong> AM (manhã)<br/>
+            <strong>Stencil Raquete:</strong> SIM - Kirschbaum - Color Black |
+            <strong>Stencil Corda:</strong> SIM - Wilson - Color Red
+            <br/>
+
+        </div>
+
+        <div class="col-lg-5">
+            <h3 style="margin-top:0px;">Extras</h3>
+            <strong>Encordoador:</strong> Ricardo Dipold @Wilson Bayardo 01<br/>
+            <strong>Overgrip:</strong> Yonex - Super Grap Overgrip - White <span class="glyphicon glyphicon-tag"
+                                                                                 aria-hidden="true"></span><br/>
+            <strong>Antivibrador:</strong> Yonex - Vibration Stopper 5 - branco <span class="glyphicon glyphicon-tag"
+                                                                                      aria-hidden="true"></span>
+
+
+            <h3>Entrega</h3>
+            <h4>
+                <span class="label label-default">LOJA</span>
+                <span class="label label-default">29/03 @16h00</span>
+            </h4>
+        </div>
+
+
+        <div class="col-lg-12">
+            <hr/>
+            <button class="btn btn-xs btn-success" onclick="javascript:fnc_Show('#raquete-r2-copia')">+</button>
+
+            <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-r1">Formulário Completo</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-raquete">Raquete</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-corda">Corda</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-extras">Extras</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-entrega">Entrega</button>
+            <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-r1-custom">Customização
+            </button>
+
+            <button class="btn btn-xs btn-warning" onclick="javascript:fnc_Hide('#raquete-r2')">REMOVER RAQUETE</button>
+        </div>
+    </div>
+
+
+    <div class="row" id="raquete-r2-copia"
+         style="display:none; border-left:8px solid #0088cc; margin-bottom:40px; padding-bottom:20px; border-bottom:1px solid #ccc; padding-top:10px;">
+
+        <div class="col-lg-7">
+            <h3 style="margin-top:0px;">Raquete #2 COPIA</h3>
+
+            <h4>YONEX - EZONE DR 98 - L3</h4>
+
+            <strong>MAINS:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>CROSSES:</strong> Kirschbaum Spiky Black Shark 16 (1.30) - 61 lbs (28 kgs)
+
+            <hr style="margin-top:5px; margin-bottom:5px;"/>
+            <strong>Qtde de nós:</strong> 4 (quatro) |
+            <strong>Horário Encordoamento:</strong> AM (manhã)<br/>
+            <strong>Stencil Raquete:</strong> SIM - Kirschbaum - Color Black |
+            <strong>Stencil Corda:</strong> SIM - Wilson - Color Red
+            <br/>
+
+        </div>
+
+        <div class="col-lg-5">
+            <h3 style="margin-top:0px;">Extras</h3>
+            <strong>Encordoador:</strong> Ricardo Dipold @Wilson Bayardo 01<br/>
+            <strong>Overgrip:</strong> Yonex - Super Grap Overgrip - White <span class="glyphicon glyphicon-tag"
+                                                                                 aria-hidden="true"></span><br/>
+            <strong>Antivibrador:</strong> Yonex - Vibration Stopper 5 - branco <span class="glyphicon glyphicon-tag"
+                                                                                      aria-hidden="true"></span>
+
+
+            <h3>Entrega</h3>
+            <h4>
+                <span class="label label-default">LOJA</span>
+                <span class="label label-default">29/03 @16h00</span>
+            </h4>
+        </div>
+
+
+        <div class="col-lg-12">
+            <hr/>
+            <button class="btn btn-xs btn-success" onclick="javascript:fnc_Shoe('#raquete-r2-copia')">+</button>
+
+            <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-r1">Formulário Completo</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-raquete">Raquete</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-corda">Corda</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-extras">Extras</button>
+            <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-r1-entrega">Entrega</button>
+            <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-r1-custom">Customização
+            </button>
+
+            <button class="btn btn-xs btn-warning" onclick="javascript:fnc_Hide('#raquete-r2-copia')">REMOVER RAQUETE
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron" style="display:none;">
+        <h1>Navbar example</h1>
+
+        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It
+            includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+
+        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+
+        <p>
+            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+        </p>
+    </div>
+
+</div>
+<!-- /container -->
+
+
+<footer class="" style="position:fixed; bottom:0; background:#333; width:100%; padding:10px;">
+    <div class="container">
+        <button class="btn btn-danger" onclick="javascript:fnc_Show('#raquete-rx');">EXCLUIR PEDIDO</button>
+        <button class="btn btn-default btn-xs" onclick="javascript:fnc_Show('#raquete-r1');">R1</button>
+        <button class="btn btn-default btn-xs" onclick="javascript:fnc_Show('#raquete-r2');">R2</button>
+        <button class="btn btn-default btn-xs" onclick="javascript:fnc_Show('#raquete-rx');">RX</button>
+
+
+        <button class="btn btn-primary pull-right" onclick="javascript:fnc_Show('#raquete-rx');">+ RAQUETE</button>
+    </div>
+</footer>
+
+
+<!-- Modal COMPLETO -->
+<div class="modal fade" id="modal-r1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Dados Completos da Raquete</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <h4>Raquete</h4>
+
+                <div class="row">
+
+
+                    <div class="col-lg-5">
+                        <label>Modelo</label>
+                        <input class="form-control" id="r1" placeholder="Digite a MARCA ou MODELO da raquete"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Grip</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>L0 - 4</option>
+                            <option>L1 - 4 1/8</option>
+                            <option>L2 - 4 1/4</option>
+                            <option>L3 - 4 3/8</option>
+                            <option>L4 - 4 1/2</option>
+                            <option>L5 - 4 5/8</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <hr/>
+                <h4>Corda</h4>
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-5">
+                        <label>Mains</label>
+                        <input class="form-control" id="r1-m" placeholder="Digite a MARCA ou MODELO da corda"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tensão</label>
+                        <input type="text" class="form-control" aria-label="..." maxlength="2"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>Lbs</option>
+                            <option>Kgs</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Pre-Stretch</label>
+                        <select class="form-control">
+                            <option>Manual</option>
+                            <option>5%</option>
+                            <option>10%</option>
+                            <option>15%</option>
+                            <option>20%</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-5">
+                        <label>Crosses</label>
+                        <input class="form-control" id="r1-c" placeholder="Digite a MARCA ou MODELO da corda"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tensão</label>
+                        <input type="text" class="form-control" aria-label="..." maxlength="2"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>Lbs</option>
+                            <option>Kgs</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Pre-Stretch</label>
+                        <select class="form-control">
+                            <option>Manual</option>
+                            <option>5%</option>
+                            <option>10%</option>
+                            <option>15%</option>
+                            <option>20%</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-3">
+                        <label>Qtde Nós</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>2</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Horário</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>AM (manhã)</option>
+                            <option>PM (noite)</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin-bottom:20px;">
+
+
+                    <div class="col-lg-3">
+                        <label>Stencil Raquete</label>
+                        <select class="form-control">
+                            <option>Nenhuma</option>
+                            <option>Babolat</option>
+                            <option>Head</option>
+                            <option>Wilson</option>
+                            <option>Yonex</option>
+                            <option>Prince</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Cor</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Vermelho</option>
+                            <option>Preto</option>
+                            <option>Azul</option>
+                            <option>Branco</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-lg-1">
+                        &nbsp;
+                    </div>
+
+
+                    <div class="col-lg-3">
+                        <label>Stencil Marca</label>
+                        <select class="form-control">
+                            <option>Nenhuma</option>
+                            <option>Alien</option>
+                            <option>Alpha & RAB</option>
+                            <option>Ashaway</option>
+                            <option>Asics</option>
+                            <option>Babolat</option>
+                            <option>Boris Becker</option>
+                            <option>Diadem
+                            <option>Dunlop</option>
+                            <option>Double AR</option>
+                            <option>Forten</option>
+                            <option>Gamma</option>
+                            <option>Gosen</option>
+                            <option>Head</option>
+                            <option>ISOSPEED</option>
+                            <option>Kirschbaum</option>
+                            <option>Klip</option>
+                            <option>L-Tec</option>
+                            <option>LaserFibre</option>
+                            <option>Luxilon</option>
+                            <option>MSV</option>
+                            <option>One</option>
+                            s
+                            <option>Pacific</option>
+                            <option>Polyfibre</option>
+                            <option>Prince</option>
+                            <option>ProKennex</option>
+                            <option>RS Robin Söderling</option>
+                            <option>Signum Pro</option>
+                            <option>Solinco</option>
+                            <option>Tecnifibre</option>
+                            <option>Toalson</option>
+                            <option>Topspin</option>
+                            <option>Tourna</option>
+                            <option>Volkl</option>
+                            <option>Weiss CANNON</option>
+                            <option>Wilson</option>
+                            <option>Yonex</option>
+                            <option>Ytex</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Cor</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Vermelho</option>
+                            <option>Preto</option>
+                            <option>Azul</option>
+                            <option>Branco</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <hr/>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h4>Extras</h4>
+
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-lg-6">
+                                <label>Encordoador</label>
+                                <select class="form-control">
+                                    <option>Selecione</option>
+                                    <option>Ricardo Dipold</option>
+                                    <option>William Freitas</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Máquina</label>
+                                <select class="form-control">
+                                    <option>Selecione</option>
+                                    <option>Wilson Bayardo 01</option>
+                                    <option>Wilson Bayardo 02</option>
+                                    <option>Babolat Sensor 01</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <hr/>
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-lg-6">
+                                <label>Cushion</label>
+                                <select class="form-control">
+                                    <option>Nenhum</option>
+                                    <option>Babolat Syntec</option>
+                                    <option>Gamma Leather</option>
+                                    <option>Head SofTac Traction</option>
+                                    <option>Prince Dura Pro+</option>
+                                    <option>Yonex Basic NS Grip</option>
+                                    <option>Yonex Ultimum Leather</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Tipo</label>
+                                <select class="form-control">
+                                    <option>--</option>
+                                    <option>Prop - PRÓPRIO</option>
+                                    <option>Comp - COMPRADO</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <hr/>
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-lg-6">
+                                <label>Overgrip</label>
+                                <select class="form-control">
+                                    <option>Nenhum</option>
+                                    <option>Prince DuraTac</option>
+                                    <option>Tourna Grip Original - Azul</option>
+                                    <option>Tourna Grip Original - Branco</option>
+                                    <option>Tourna Grip Overgrip XL - Azul</option>
+                                    <option>Tourna Grip Overgrip XL - Branco</option>
+                                    <option>Wilson Comfort</option>
+                                    <option>Wilson Pro - Branco</option>
+                                    <option>Wilson Pro - Preto</option>
+                                    <option>Wilson Super Thin</option>
+                                    <option>Yonex Super Grap - Branco</option>
+                                    <option>Yonex Super Grap - Preto</option>
+                                    <option>Yonex Super Grap - Verde</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Tipo</label>
+                                <select class="form-control">
+                                    <option>--</option>
+                                    <option>Prop - PRÓPRIO</option>
+                                    <option>Comp - COMPRADO</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <hr/>
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-lg-6">
+                                <label>Antivibrador</label>
+                                <select class="form-control">
+                                    <option>Nenhum</option>
+                                    <option>Angry Birds</option>
+                                    <option>Babolat</option>
+                                    <option>Head</option>
+                                    <option>Prince</option>
+                                    <option>Tourna Pete Sampras - Branco</option>
+                                    <option>Tourna Pete Sampras - Preto</option>
+                                    <option>Tourna Pete Sampras - Vermelho</option>
+                                    <option>Wilson</option>
+                                    <option>Yonex - Vibration Stopper 5 - Azul</option>
+                                    <option>Yonex - Vibration Stopper 5 - Amarelo</option>
+                                    <option>Yonex - Vibration Stopper 5 - Branco</option>
+                                    <option>Yonex - Vibration Stopper 5 - Preto</option>
+                                    <option>Yonex - Vibration Stopper 5 - Rosa</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label>Tipo</label>
+                                <select class="form-control">
+                                    <option>--</option>
+                                    <option>Prop - PRÓPRIO</option>
+                                    <option>Comp - COMPRADO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-offset-1 col-lg-6">
+                        <h4>Entrega</h4>
+
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-lg-4">
+                                <label>Local</label>
+                                <select class="form-control">
+                                    <option>Selecione</option>
+                                    <option>ONCOURT</option>
+                                    <option>Loja</option>
+                                    <option>Endereço</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label>Data</label>
+                                <select class="form-control">
+                                    <option>Selecione</option>
+                                    <option>Hoje</option>
+                                    <option>Amanhã</option>
+                                    <option>Outra Data</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label>Horário</label>
+                                <input type="text" class="form-control" placeholder="00h00m"/>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-lg-12">
+                                <label>Observações</label>
+                                <textarea class="form-control" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--
+                <h4>Extras</h4>
+                <div class="row" style="margin-bottom:20px;">
+                  <div class="col-lg-3">
+                    <label>Encordoador</label>
+                    <select class="form-control">
+                      <option>Selecione</option>
+                      <option>Ricardo Dipold</option>
+                      <option>William Freitas</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-3">
+                    <label>Máquina</label>
+                    <select class="form-control">
+                      <option>Selecione</option>
+                      <option>Wilson Bayardo 01</option>
+                      <option>Wilson Bayardo 02</option>
+                      <option>Babolat Sensor 01</option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+                <hr />
+                <div class="row" style="margin-bottom:20px;">
+                  <div class="col-lg-3">
+                    <label>Cushion</label>
+                    <select class="form-control">
+                      <option>Nenhum</option>
+                      <option>Babolat Syntec</option>
+                      <option>Gamma Leather</option>
+                      <option>Head SofTac Traction</option>
+                      <option>Prince Dura Pro+</option>
+                      <option>Yonex Basic NS Grip</option>
+                      <option>Yonex Ultimum Leather</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-2">
+                    <label>Tipo</label>
+                    <select class="form-control">
+                      <option>--</option>
+                      <option>Prop - PRÓPRIO</option>
+                      <option>Comp - COMPRADO</option>
+                    </select>
+                  </div>
+                </div>
+
+                <hr />
+                <div class="row" style="margin-bottom:20px;">
+                  <div class="col-lg-3">
+                    <label>Overgrip</label>
+                    <select class="form-control">
+                      <option>Nenhum</option>
+                      <option>Prince DuraTac</option>
+                      <option>Tourna Grip Original - Azul</option>
+                      <option>Tourna Grip Original - Branco</option>
+                      <option>Tourna Grip Overgrip XL - Azul</option>
+                      <option>Tourna Grip Overgrip XL - Branco</option>
+                      <option>Wilson Comfort</option>
+                      <option>Wilson Pro - Branco</option>
+                      <option>Wilson Pro - Preto</option>
+                      <option>Wilson Super Thin</option>
+                      <option>Yonex Super Grap - Branco</option>
+                      <option>Yonex Super Grap - Preto</option>
+                      <option>Yonex Super Grap - Verde</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-2">
+                    <label>Tipo</label>
+                    <select class="form-control">
+                      <option>--</option>
+                      <option>Prop - PRÓPRIO</option>
+                      <option>Comp - COMPRADO</option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+                <hr />
+                <div class="row" style="margin-bottom:20px;">
+                  <div class="col-lg-3">
+                    <label>Antivibrador</label>
+                    <select class="form-control">
+                      <option>Nenhum</option>
+                      <option>Angry Birds</option>
+                      <option>Babolat</option>
+                      <option>Head</option>
+                      <option>Prince</option>
+                      <option>Tourna Pete Sampras - Branco</option>
+                      <option>Tourna Pete Sampras - Preto</option>
+                      <option>Tourna Pete Sampras - Vermelho</option>
+                      <option>Wilson</option>
+                      <option>Yonex - Vibration Stopper 5 - Azul</option>
+                      <option>Yonex - Vibration Stopper 5 - Amarelo</option>
+                      <option>Yonex - Vibration Stopper 5 - Branco</option>
+                      <option>Yonex - Vibration Stopper 5 - Preto</option>
+                      <option>Yonex - Vibration Stopper 5 - Rosa</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-2">
+                    <label>Tipo</label>
+                    <select class="form-control">
+                      <option>--</option>
+                      <option>Prop - PRÓPRIO</option>
+                      <option>Comp - COMPRADO</option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <hr />
+                <h4>Entrega</h4>
+                <div class="row" style="margin-bottom:20px;">
+                  <div class="col-lg-2">
+                    <label>Local</label>
+                    <select class="form-control">
+                      <option>Selecione</option>
+                      <option>ONCOURT</option>
+                      <option>Loja</option>
+                      <option>Endereço</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-2">
+                    <label>Data</label>
+                    <select class="form-control">
+                      <option>Selecione</option>
+                      <option>Hoje</option>
+                      <option>Amanhã</option>
+                      <option>Outra Data</option>
+                    </select>
+                  </div>
+
+                  <div class="col-lg-2">
+                    <label>Horário</label>
+                    <input type="text" class="form-control" placeholder="00h00m" />
+                  </div>
+                </div>
+
+                <div class="row" style="margin-bottom:20px;">
+                  <div class="col-lg-12">
+                    <label>Observações</label>
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </div>
+                -->
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL COMPLETO fim -->
+
+
+<!-- Modal RAQUETE INICIO -->
+<div class="modal fade" id="modal-r1-raquete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Raquete</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row">
+
+
+                    <div class="col-lg-5">
+                        <label>Marca & Modelo</label>
+                        <input class="form-control" id="r1-modal-raquete"
+                               placeholder="Digite a MARCA ou MODELO da raquete"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Grip</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>L0 - 4</option>
+                            <option>L1 - 4 1/8</option>
+                            <option>L2 - 4 1/4</option>
+                            <option>L3 - 4 3/8</option>
+                            <option>L4 - 4 1/2</option>
+                            <option>L5 - 4 5/8</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL RAQUETE FIM -->
+
+
+<!-- Modal Corda INICIO -->
+<div class="modal fade" id="modal-r1-corda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Corda</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-5">
+                        <label>Mains</label>
+                        <input class="form-control" id="r1-m" placeholder="Digite a MARCA ou MODELO da corda"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tensão</label>
+                        <input type="text" class="form-control" aria-label="..." maxlength="2"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>Lbs</option>
+                            <option>Kgs</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Pre-Stretch</label>
+                        <select class="form-control">
+                            <option>Manual</option>
+                            <option>5%</option>
+                            <option>10%</option>
+                            <option>15%</option>
+                            <option>20%</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-5">
+                        <label>Crosses</label>
+                        <input class="form-control" id="r1-c" placeholder="Digite a MARCA ou MODELO da corda"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tensão</label>
+                        <input type="text" class="form-control" aria-label="..." maxlength="2"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>Lbs</option>
+                            <option>Kgs</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Pre-Stretch</label>
+                        <select class="form-control">
+                            <option>Manual</option>
+                            <option>5%</option>
+                            <option>10%</option>
+                            <option>15%</option>
+                            <option>20%</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-3">
+                        <label>Qtde Nós</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>2</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Horário</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>AM (manhã)</option>
+                            <option>PM (noite)</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="margin-bottom:20px;">
+
+
+                    <div class="col-lg-3">
+                        <label>Stencil Raquete</label>
+                        <select class="form-control">
+                            <option>Nenhuma</option>
+                            <option>Babolat</option>
+                            <option>Head</option>
+                            <option>Wilson</option>
+                            <option>Yonex</option>
+                            <option>Prince</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Cor</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Vermelho</option>
+                            <option>Preto</option>
+                            <option>Azul</option>
+                            <option>Branco</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-lg-1">
+                        &nbsp;
+                    </div>
+
+
+                    <div class="col-lg-3">
+                        <label>Stencil Marca</label>
+                        <select class="form-control">
+                            <option>Nenhuma</option>
+                            <option>Alien</option>
+                            <option>Alpha & RAB</option>
+                            <option>Ashaway</option>
+                            <option>Asics</option>
+                            <option>Babolat</option>
+                            <option>Boris Becker</option>
+                            <option>Diadem
+                            <option>Dunlop</option>
+                            <option>Double AR</option>
+                            <option>Forten</option>
+                            <option>Gamma</option>
+                            <option>Gosen</option>
+                            <option>Head</option>
+                            <option>ISOSPEED</option>
+                            <option>Kirschbaum</option>
+                            <option>Klip</option>
+                            <option>L-Tec</option>
+                            <option>LaserFibre</option>
+                            <option>Luxilon</option>
+                            <option>MSV</option>
+                            <option>One</option>
+                            s
+                            <option>Pacific</option>
+                            <option>Polyfibre</option>
+                            <option>Prince</option>
+                            <option>ProKennex</option>
+                            <option>RS Robin Söderling</option>
+                            <option>Signum Pro</option>
+                            <option>Solinco</option>
+                            <option>Tecnifibre</option>
+                            <option>Toalson</option>
+                            <option>Topspin</option>
+                            <option>Tourna</option>
+                            <option>Volkl</option>
+                            <option>Weiss CANNON</option>
+                            <option>Wilson</option>
+                            <option>Yonex</option>
+                            <option>Ytex</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Cor</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Vermelho</option>
+                            <option>Preto</option>
+                            <option>Azul</option>
+                            <option>Branco</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL CORDA FIM -->
+
+
+<!-- Modal EXTRAS INICIO -->
+<div class="modal fade" id="modal-r1-extras" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Extras</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-6">
+                        <label>Encordoador</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Ricardo Dipold</option>
+                            <option>William Freitas</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>Máquina</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Wilson Bayardo 01</option>
+                            <option>Wilson Bayardo 02</option>
+                            <option>Babolat Sensor 01</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <hr/>
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-6">
+                        <label>Cushion</label>
+                        <select class="form-control">
+                            <option>Nenhum</option>
+                            <option>Babolat Syntec</option>
+                            <option>Gamma Leather</option>
+                            <option>Head SofTac Traction</option>
+                            <option>Prince Dura Pro+</option>
+                            <option>Yonex Basic NS Grip</option>
+                            <option>Yonex Ultimum Leather</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>--</option>
+                            <option>Prop - PRÓPRIO</option>
+                            <option>Comp - COMPRADO</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr/>
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-6">
+                        <label>Overgrip</label>
+                        <select class="form-control">
+                            <option>Nenhum</option>
+                            <option>Prince DuraTac</option>
+                            <option>Tourna Grip Original - Azul</option>
+                            <option>Tourna Grip Original - Branco</option>
+                            <option>Tourna Grip Overgrip XL - Azul</option>
+                            <option>Tourna Grip Overgrip XL - Branco</option>
+                            <option>Wilson Comfort</option>
+                            <option>Wilson Pro - Branco</option>
+                            <option>Wilson Pro - Preto</option>
+                            <option>Wilson Super Thin</option>
+                            <option>Yonex Super Grap - Branco</option>
+                            <option>Yonex Super Grap - Preto</option>
+                            <option>Yonex Super Grap - Verde</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>--</option>
+                            <option>Prop - PRÓPRIO</option>
+                            <option>Comp - COMPRADO</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <hr/>
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-6">
+                        <label>Antivibrador</label>
+                        <select class="form-control">
+                            <option>Nenhum</option>
+                            <option>Angry Birds</option>
+                            <option>Babolat</option>
+                            <option>Head</option>
+                            <option>Prince</option>
+                            <option>Tourna Pete Sampras - Branco</option>
+                            <option>Tourna Pete Sampras - Preto</option>
+                            <option>Tourna Pete Sampras - Vermelho</option>
+                            <option>Wilson</option>
+                            <option>Yonex - Vibration Stopper 5 - Azul</option>
+                            <option>Yonex - Vibration Stopper 5 - Amarelo</option>
+                            <option>Yonex - Vibration Stopper 5 - Branco</option>
+                            <option>Yonex - Vibration Stopper 5 - Preto</option>
+                            <option>Yonex - Vibration Stopper 5 - Rosa</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>Tipo</label>
+                        <select class="form-control">
+                            <option>--</option>
+                            <option>Prop - PRÓPRIO</option>
+                            <option>Comp - COMPRADO</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL EXTRAS FIM -->
+
+
+<!-- Modal ENTREGA INICIO -->
+<div class="modal fade" id="modal-r1-entrega" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Entrega</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-2">
+                        <label>Local</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>ONCOURT</option>
+                            <option>Loja</option>
+                            <option>Endereço</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Data</label>
+                        <select class="form-control">
+                            <option>Selecione</option>
+                            <option>Hoje</option>
+                            <option>Amanhã</option>
+                            <option>Outra Data</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Horário</label>
+                        <input type="text" class="form-control" placeholder="00h00m"/>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-12">
+                        <label>Observações</label>
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL ENTREGA FIM -->
+
+
+<!-- Modal CUSTOMIZACAO INICIO -->
+<div class="modal fade" id="modal-r1-custom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Customizacao</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-2">
+                        <label>Customizar?</label>
+                        <select class="form-control">
+                            <option>Não</option>
+                            <option>Sim</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Peso (gr)</label>
+                        <input type="text" class="form-control" placeholder="000"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Swingweight</label>
+                        <input type="text" class="form-control" placeholder="000"/>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <label>Equilíbrio (cm)</label>
+                        <input type="text" class="form-control" placeholder="00"/>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-lg-12">
+                        <label>Observações</label>
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Fechar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL CUSTOMIZACAO FIM -->
+
+
+
+<script>
+    $(function () {
+        var availableTags = [
+
+            "Avery Eclipse Fusion",
+            "Avery Ezone Ai",
+            "Babolat Aero Pro Drive GT Roland Garros",
+            "Babolat Aero Pro Team",
+            "Babolat Aero Storm",
+            "Babolat Aero Storm GT",
+            "Babolat AeroPro Drive",
+            "Babolat AeroPro Drive (with Cortex)",
+            "Babolat AeroPro Drive +",
+            "Babolat Aeropro Drive + (with Cortex)",
+            "Babolat AeroPro Drive + GT",
+            "Babolat AeroPro Drive GT",
+            "Babolat Aeropro Drive Junior",
+            "Babolat AeroPro Lite GT",
+            "Babolat AeroPro Team GT",
+            "Babolat Drive Z Lite",
+            "Babolat Drive Z Lite (with Cortex)",
+            "Babolat Drive Z Max",
+            "Babolat Drive Z-Lite GT",
+            "Babolat Play Aero Pro Drive GT",
+            "Babolat Play Pure Drive GT 2012",
+            "Babolat Pure Aero ",
+            "Babolat Pure Aero Lite",
+            "Babolat Pure Aero Team",
+            "Babolat Pure Aero Tour",
+            "Babolat Pure Control",
+            "Babolat Pure Control +",
+            "Babolat Pure Control Zylon 360",
+            "Babolat Pure Control Zylon 360 +",
+            "Babolat Pure Drive",
+            "Babolat Pure Drive (with Cortex)",
+            "Babolat Pure Drive + (with Cortex)",
+            "Babolat Pure Drive 107 (with Cortex)",
+            "Babolat Pure Drive 107 GT",
+            "Babolat Pure Drive 110 (with Cortex)",
+            "Babolat Pure Drive GT",
+            "Babolat Pure Drive GT +",
+            "Babolat Pure Drive Lite GT",
+            "Babolat Pure Drive Roddick",
+            "Babolat Pure Drive Roddick +",
+            "Babolat Pure Drive Roddick GT",
+            "Babolat Pure Drive Team",
+            "Babolat Pure Drive Team +",
+            "Babolat Pure Drive Zylon 360",
+            "Babolat Pure Drive Zylon 360 +",
+            "Babolat Pure Storm",
+            "Babolat Pure Storm GT",
+            "Babolat Pure Storm Team",
+            "Babolat Pure Storm Tour",
+            "Babolat Pure Storm Tour +",
+            "Babolat Pure Storm Tour GT",
+            "Babolat Pure Strike 100",
+            "Dunlop 200G 100",
+            "Dunlop 300G 98",
+            "Dunlop 400G 100",
+            "Dunlop 500G 102",
+            "Dunlop Aerogel 1 Hundred (100)",
+            "Dunlop Aerogel 2 Hundred (200)",
+            "Dunlop Aerogel 3 Hundred (300)",
+            "Dunlop Aerogel 3 Hundred (300) Tour",
+            "Dunlop Aerogel 4 Hundred (400)",
+            "Dunlop Aerogel 5 Hundred (500)",
+            "Dunlop Aerogel 5 Hundred (500) Tour",
+            "Dunlop Aerogel 500 Tour (4D)",
+            "Dunlop Aerogel 6 Hundred (600)",
+            "Dunlop Aerogel 7 Hundred (700)",
+            "Dunlop Aerogel 8 Hundred (800)",
+            "Dunlop Aerogel 9 Hundred (900)",
+            "Dunlop Biomimetic 600",
+            "Dunlop Biomimetric M 2.0",
+            "Dunlop Biomimetric M 5.0",
+            "Dunlop Force 100",
+            "Dunlop Force 100 Tour ",
+            "Dunlop Force 98",
+            "Fischer Beat Pro Titanium",
+            "Fischer MPro 1",
+            "Head Agassi Radical (Limited Edition)",
+            "Head Airflow 1",
+            "Head Airflow 3",
+            "Head Airflow 3 Crossbow",
+            "Head Airflow 5",
+            "Head Airflow 5 Crossbow",
+            "Head Airflow 7",
+            "Head Airflow 7 Crossbow",
+            "Head Arthur Ashe Competition 3",
+            "Head Arthur Ashe Competition Edge",
+            "Head Atlantis 660",
+            "Head Atlantis 720",
+            "Head Big Bang (Pyramid Series)",
+            "Head Classic Mid",
+            "Head Classic Tour MP",
+            "Head Cross Bow 6",
+            "Head Crossbow 10",
+            "Head Crossbow 2",
+            "Head Crossbow 4",
+            "Head Crossbow 6",
+            "Head Director (Pyramid Series)",
+            "Head Edge (Pyramid Series)",
+            "Head Extreme MP 2.0",
+            "Head Flexpoint 1 MP",
+            "Head Flexpoint 1 OS",
+            "Head Flexpoint 10",
+            "Head Flexpoint 130",
+            "Head Flexpoint 140",
+            "Head Flexpoint 150",
+            "Head Flexpoint 4",
+            "Head Flexpoint 6 MP",
+            "Head Flexpoint 6 OS",
+            "Head Flexpoint Fire",
+            "Head Flexpoint Heat",
+            "Head Flexpoint Instinct",
+            "Head Flexpoint Prestige Mid",
+            "Head Flexpoint Prestige MP",
+            "Head Flexpoint Prestige MP Team",
+            "Head Flexpoint Prestige XL MP",
+            "Head Flexpoint Radical MP",
+            "Head Flexpoint Radical OS",
+            "Head Flexpoint Radical Tour MP ",
+            "Head Flexpoint Radical Tour OS",
+            "Head FXP Instinct Team (Flexpoint)",
+            "Head FXP Prestige Team",
+            "Head FXP Radical Team (Flexpoint)",
+            "Head Genesis 720",
+            "Head Genesis IDS 720",
+            "Head Graphene Prestige MP",
+            "Head Graphene Radical MP",
+            "Head Graphene Speed MP",
+            "Head Graphene XT Instinct MP",
+            "Head Graphene XT Prestige Mid",
+            "Head Graphene XT Prestige Rev Pro",
+            "Head Graphene XT Radical MP",
+            "Head Graphene XT Speed Pro",
+            "Head i.extreme MP",
+            "Head i.prestige Mid (early)",
+            "Head i.prestige Mid (late)",
+            "Head i.prestige MP",
+            "Head i.prestige MP XL",
+            "Head i.Radical",
+            "Head i.radical MP",
+            "Head i.radical OS",
+            "Head i.S1 MP",
+            "Head i.S10",
+            "Head i.S12",
+            "Head i.S18",
+            "Head i.S2 MP",
+            "Head i.S2 OS",
+            "Head i.S4 MP",
+            "Head i.S4 OS",
+            "Head i.S6 MP",
+            "Head i.S6 OS",
+            "Head i.S9 OS",
+            "Head i.speed MP",
+            "Head i.tour MP ",
+            "Head i.X Speed MP",
+            "Head i.X1 OS ",
+            "Head i.X11 OS (Blue - 70 Holes)",
+            "Head i.X16 Chip System",
+            "Head i.X3 MP",
+            "Head i.X3 OS",
+            "Head i.X5 MP",
+            "Head i.X5 OS",
+            "Head i.X6 MP",
+            "Head i.X6 OS",
+            "Head Instinct MP",
+            "Head Liquidmetal 1 110",
+            "Head Liquidmetal 170",
+            "Head Liquidmetal 2",
+            "Head Liquidmetal 4",
+            "Head Liquidmetal 4.5",
+            "Head Liquidmetal 5",
+            "Head Liquidmetal 6 OS",
+            "Head Liquidmetal 8",
+            "Head Liquidmetal Fire",
+            "Head Liquidmetal Heat",
+            "Head Liquidmetal Instinct",
+            "Head Liquidmetal Instinct Tour XL",
+            "Head Liquidmetal Prestige Mid",
+            "Head Liquidmetal Prestige MP",
+            "Head Liquidmetal Radical MP",
+            "Head Liquidmetal Radical OS",
+            "Head Liquidmetal Radical Tour MP",
+            "Head Liquidmetal Rave",
+            "Head Metallix 10",
+            "Head Metallix 115",
+            "Head Metallix 130",
+            "Head Metallix 2",
+            "Head Metallix 4",
+            "Head Metallix 6",
+            "Head MicroGel Extreme",
+            "Head MicroGel Extreme Pro",
+            "Head MicroGel Extreme Team",
+            "Head MicroGel Instinct",
+            "Head Microgel Mojo",
+            "Head MicroGel Monster",
+            "Head MicroGel Prestige Mid",
+            "Head MicroGel Prestige MP",
+            "Head MicroGel Prestige Pro MP",
+            "Head MicroGel Radical MP",
+            "Head MicroGel Radical OS",
+            "Head MicroGel Radical Pro MP",
+            "Head Microgel Radical Team",
+            "Head Premier Tour",
+            "Head Prestige Classic 600",
+            "Head Prestige Tour 300 MP (660)",
+            "Head Prestige Tour 300 MS",
+            "Head Protector MP",
+            "Head Protector MP",
+            "Head Protector OS ",
+            "Head Radical Lite OS",
+            "Head Radical MP",
+            "Head Radical Tour MP (630)",
+            "Head Radical Tour MP XL",
+            "Head Radical Tour OS XL",
+            "Head Satellite Tour",
+            "Head Satellite Tour XL",
+            "Head Speed Graphene ",
+            "Head Speed Graphene Pro",
+            "Head Speed Graphene Pro",
+            "Head Supreme Competition",
+            "Head Supreme Competition XL",
+            "Head Ti. S5",
+            "Head Ti.Classic MP",
+            "Head Ti.Fire",
+            "Head Ti.Fire Comfort Zone",
+            "Head Ti.Fire Tour Edition XL",
+            "Head Ti.Heat",
+            "Head Ti.Laser Comfort Zone XL",
+            "Head Ti.Radical MP",
+            "Head Ti.Radical OS",
+            "Head Ti.S1",
+            "Head Ti.S2",
+            "Head Ti.S4 Comfort Zone XL",
+            "Head Ti.S4 XL",
+            "Head Ti.S5",
+            "Head Ti.S5 Comfort Zone XL",
+            "Head Ti.S6",
+            "Head Ti.S7",
+            "Head Ti.S8 XL",
+            "Head Ti.Sonic 110",
+            "Head Ultimate Competition XL",
+            "Head Youtek IG Radical MP",
+            "Head Youtek IG Radical PRO",
+            "Head Youtek IG Radical S",
+            "Head YOUTEK Radical Lite",
+            "Head YOUTEK Radical MP",
+            "Head YOUTEK Radical Oversize",
+            "Head YOUTEK Radical Pro",
+            "Head YOUTEK Speed Elite",
+            "Head YOUTEK Speed Lite",
+            "Head YOUTEK Speed MP",
+            "Head YOUTEK Speed MP",
+            "Head YOUTEK Speed Pro",
+            "Prince  Graphite MidPlus ",
+            "Prince Air Beast",
+            "Prince Air Freak Midplus",
+            "Prince Air Freak Oversize",
+            "Prince Air Vanquish Midplus",
+            "Prince Air Vanquish Oversize",
+            "Prince AirDB Midplus",
+            "Prince AirDB Oversize",
+            "Prince AirDrive B900 MP",
+            "Prince AirDrive B975 OS",
+            "Prince AirLaunch B875 MP",
+            "Prince AirLaunch B925 OS",
+            "Prince AirO Scream MP",
+            "Prince AirO Scream OS",
+            "Prince AirStick B1025 OS",
+            "Prince AirStick B950 MP",
+            "Prince AirStick B975 MP",
+            "Prince CTS Storm OS",
+            "Prince Diablo XP MP",
+            "Prince Diablo XP OS",
+            "Prince EXO3 Black 100",
+            "Prince EXO3 Blue 110",
+            "Prince EXO3 Graphite 100",
+            "Prince EXO3 Graphite Mid",
+            "Prince EXO3 Graphite Midplus",
+            "Prince EXO3 Ignite 95",
+            "Prince EXO3 Ignite Pro 95",
+            "Prince EXO3 Ignite Team 95",
+            "Prince EXO3 Rebel 95",
+            "Prince EXO3 Rebel Team 95",
+            "Prince EXO3 Red",
+            "Prince EXO3 Silver 118",
+            "Prince EXO3 Tour 100 18x20",
+            "Prince EXO3 White 100",
+            "Prince Extender Mach 1000 OS",
+            "Prince Graphite Classic OS",
+            "Prince Graphite MidPlus",
+            "Prince Michael Chang OS",
+            "Prince Michael Chang Titanium MP",
+            "Prince Michael Chang Titanium OS",
+            "Prince More Approach 105",
+            "Prince More Attack 1050 S OS",
+            "Prince More Attack 920 S MP",
+            "Prince More Balance 950 S MP",
+            "Prince More Control DB 800 MP",
+            "Prince More Control DB 850 OS",
+            "Prince More Dominant OS",
+            "Prince More Game MP",
+            "Prince More Game OS",
+            "Prince More Power 1150 S OS",
+            "Prince More Power 1500 S OS",
+            "Prince More Precision MP",
+            "Prince More Precision OS",
+            "Prince More Response MP",
+            "Prince More Response OS",
+            "Prince More Thunder OS",
+            "Prince O3 Blue",
+            "Prince O3 Citron OS",
+            "Prince O3 Hornet Hybrid MP",
+            "Prince O3 Hornet Hybrid OS",
+            "Prince O3 Hybrid Comp MP",
+            "Prince O3 Hybrid Lite OS",
+            "Prince O3 Hybrid Tour",
+            "Prince O3 Hybrid Tour Player Edition",
+            "Prince O3 Pink OS",
+            "Prince O3 Red MP",
+            "Prince O3 Royal",
+            "Prince O3 Shark Hybrid MP",
+            "Prince O3 Shark Hybrid OS",
+            "Prince O3 Silver OS",
+            "Prince O3 Spectrum Hybrid MP",
+            "Prince O3 Spectrum Hybrid OS",
+            "Prince O3 Speedport Black",
+            "Prince O3 Speedport Black Longbody",
+            "Prince O3 Speedport Black Team",
+            "Prince O3 Speedport Blue",
+            "Prince O3 Speedport Gold",
+            "Prince O3 Speedport Platinum",
+            "Prince O3 Speedport Pro White",
+            "Prince O3 Speedport Red",
+            "Prince O3 Speedport Silver",
+            "Prince O3 Speedport Tour",
+            "Prince O3 Speedport White MP",
+            "Prince O3 Tour 100",
+            "Prince O3 Tour MS",
+            "Prince O3 Tour OS",
+            "Prince O3 White MP",
+            "Prince O3 White Sharapova",
+            "Prince OZone Four",
+            "Prince OZone One",
+            "Prince Ozone Pro Tour",
+            "Prince OZone Seven",
+            "Prince Ozone Tour",
+            "Prince Precision 720 MP",
+            "Prince Precision 730",
+            "Prince Precision 770",
+            "Prince Precision Approach Titanium MP",
+            "Prince Precision Approach Titanium OS",
+            "Prince Precision Equipe Longbody MP",
+            "Prince Precision Equipe Longbody OS",
+            "Prince Precision Equipe MP",
+            "Prince Precision Equipe OS",
+            "Prince Precision Graphite 640 PL MP",
+            "Prince Precision Graphite 700 PL OS",
+            "Prince Precision Mono",
+            "Prince Precision Response 660 MP",
+            "Prince Precision Response 710 OS",
+            "Prince Precision Response Titanium MP",
+            "Prince Precision Spectrum 630 MP",
+            "Prince Precision Spectrum 670 OS",
+            "Prince Prince Tour 98",
+            "Prince Ripstick 800PL MP",
+            "Prince Shark DB MP",
+            "Prince Shark DB OS",
+            "Prince Shark MP",
+            "Prince Shark MP Longbody",
+            "Prince Shark OS",
+            "Prince Spectrum Comp 90",
+            "Prince Textreme Tour 95",
+            "Prince Thunder 750 MP",
+            "Prince Thunder 820 OS",
+            "Prince Thunder 970 OS",
+            "Prince Thunder Rip OS",
+            "Prince ThunderBlast OS",
+            "Prince ThunderBolt MP",
+            "Prince ThunderBolt OS",
+            "Prince ThunderCloud Titanium",
+            "Prince ThunderExtreme Titanium MP",
+            "Prince ThunderExtreme Titanium OS",
+            "Prince ThunderLite Longbody MP",
+            "Prince ThunderLite Longbody OS",
+            "Prince ThunderLite MP",
+            "Prince ThunderLite OS",
+            "Prince ThunderStick MP",
+            "Prince ThunderStick OS",
+            "Prince ThunderStorm OS",
+            "Prince ThunderStrike Titanium LB OS",
+            "Prince ThunderStrike Titanium OS",
+            "Prince ThunderSuperLite Titanium",
+            "Prince ThunderUltraLite Titanium MP",
+            "Prince ThunderUltraLite Titanium OS",
+            "Prince Tour 100 - 16x18",
+            "Prince Tour 100 - 18x20",
+            "Prince Tour 100T",
+            "Prince Tour 95 TeXtreme",
+            "Prince Tour Diablo Mid",
+            "Prince Tour Diablo MP",
+            "Prince Tour Graphite OS",
+            "Prince Tour NXGraphite Mid",
+            "Prince Tour NXGraphite MP",
+            "Prince Tour NXGraphite OS",
+            "Prince Triple Threat Attitude 100",
+            "Prince Triple Threat Attitude 115",
+            "Prince Triple Threat Bandit 110",
+            "Prince Triple Threat Bandit 95",
+            "Prince Triple Threat Grande OS",
+            "Prince Triple Threat Grande SOS",
+            "Prince Triple Threat Graphite Mid",
+            "Prince Triple Threat Graphite MP",
+            "Prince Triple Threat Graphite OS",
+            "Prince Triple Threat Hornet 100",
+            "Prince Triple Threat Hornet 110",
+            "Prince Triple Threat Rebel 95",
+            "Prince Triple Threat Ring",
+            "Prince Triple Threat Rip",
+            "Prince Triple Threat Scream MP",
+            "Prince Triple Threat Scream OS",
+            "Prince Triple Threat Sovereign",
+            "Prince Triple Threat Stealth 100",
+            "Prince Triple Threat Stealth 115",
+            "Prince Triple Threat Vendetta 110",
+            "Prince Triple Threat Vendetta 95",
+            "Prince Triple Threat Viper 115",
+            "Prince Triple Threat Warrior MP",
+            "Prince Triple Threat Warrior OS",
+            "Prince Turbo Beast MP",
+            "Prince Turbo Beast OS",
+            "Prince Turbo Outlaw MP",
+            "Prince Turbo Outlaw OS",
+            "Prince Warrior 100 - 16x19",
+            "Pro Kennex Core 1 No. 06",
+            "Pro Kennex Core 1 No. 10",
+            "Pro Kennex Core 1 No. 20",
+            "Pro Kennex Core 1 No. 22",
+            "Pro Kennex Core 1 No. 24",
+            "Pro Kennex Graphite Overlay",
+            "Pro Kennex Intensity Ti. PBT Reach",
+            "Pro Kennex ki 10",
+            "Pro Kennex Ki 10 PSE",
+            "Pro Kennex Ki 15",
+            "Pro Kennex Ki 15 PSE",
+            "Pro Kennex Ki 20",
+            "Pro Kennex Ki 20 PSE",
+            "Pro Kennex Ki 30",
+            "Pro Kennex Ki 5",
+            "Pro Kennex Ki 5 PSE",
+            "Pro Kennex Ki 5x",
+            "Pro Kennex Kinetic",
+            "Pro Kennex Kinetic 11g",
+            "Pro Kennex Kinetic 15g",
+            "Pro Kennex Kinetic 20g Reach",
+            "Pro Kennex Kinetic Charged",
+            "Pro Kennex Kinetic Charged Light 17g",
+            "Pro Kennex Kinetic Pro 15g",
+            "Pro Kennex Kinetic Pro 15g Light",
+            "Pro Kennex Kinetic Pro 15g Reach",
+            "Pro Kennex Kinetic Pro 15g Ti Reach",
+            "Pro Kennex Kinetic Pro 20g Reach",
+            "Pro Kennex Kinetic Pro 20g Ti Reach",
+            "Pro Kennex Kinetic Pro 5g",
+            "Pro Kennex Kinetic Pro 5g Reach MP",
+            "Pro Kennex Kinetic Pro 5g Reach OS",
+            "Pro Kennex Kinetic Pro 7g",
+            "Pro Kennex Ti Destiny PBT",
+            "Pro Kennex Type C 93",
+            "Pro Kennex Type C 93 Redondo Edition",
+            "Pro Kennex Type C 98",
+            "Pro Kennex Type C 98 Redondo Edition",
+            "Pro Kennex Type R",
+            "Pro Kennex Type S",
+            "Pro Kennex Type SX",
+            "Tecnifibre T Feel 275 XL",
+            "Tecnifibre T Feel 290 XL",
+            "Tecnifibre T Feel 305",
+            "Tecnifibre T Feel 305",
+            "Tecnifibre T Feel 305 XL",
+            "Tecnifibre T Fight 315",
+            "Tecnifibre T Fight 320",
+            "Tecnifibre T Fight 320 ",
+            "Tecnifibre T Fight 320 XL",
+            "Tecnifibre T Fight 325",
+            "Tecnifibre T Fight 335",
+            "Tecnifibre T Fight 335",
+            "Tecnifibre T Flash 270 OS",
+            "Tecnifibre T Flash 290",
+            "Tecnifibre T Flash 310",
+            "Tecnifibre T Flash 310",
+            "Tecnifibre T Flash 310 XL",
+            "Tecnifibre TFight 295 VO2 Max",
+            "Tecnifibre TFight 320 VO2 Max",
+            "Tecnifibre TFight 325 VO2 Max",
+            "Tecnifibre TFight 325 XL VO2 Max",
+            "Tecnifibre TFlash 290 VO2 max",
+            "Tecnifibre TFlash 315 VO2 Max",
+            "Volkl Boris Becker 1",
+            "Volkl Boris Becker 10",
+            "Volkl Boris Becker 5",
+            "Volkl C10 Pro",
+            "Volkl C10 Pro OS",
+            "Volkl C10 Pro Tour",
+            "Volkl C10 Pro Xtended",
+            "Volkl C7 Pro",
+            "Volkl C8 Pro",
+            "Volkl C9 Pro",
+            "Volkl C9 Pro Xtended",
+            "Volkl Catapult 1",
+            "Volkl Catapult 1 (with Fire) (GenerationII)",
+            "Volkl Catapult 10",
+            "Volkl Catapult 2",
+            "Volkl Catapult 2 (GenerationII)",
+            "Volkl Catapult 3",
+            "Volkl Catapult 4",
+            "Volkl Catapult 4 Gen II",
+            "Volkl Catapult 6",
+            "Volkl Catapult 7",
+            "Volkl Catapult 8 V-Engine",
+            "Volkl Catapult V1 MP",
+            "Volkl Catapult V1 OS",
+            "Volkl DNX 1",
+            "Volkl DNX 10 Mid",
+            "Volkl DNX 10 Midplus",
+            "Volkl DNX 2 Attiva",
+            "Volkl DNX 3",
+            "Volkl DNX 4",
+            "Volkl DNX 6 Attiva",
+            "Volkl DNX 7",
+            "Volkl DNX 8",
+            "Volkl DNX 9",
+            "Volkl DNX V1 MP",
+            "Volkl DNX V1 OS",
+            "Volkl HS1 Hot Spot",
+            "Volkl HS5 hot Spot",
+            "Volkl PB V1",
+            "Volkl Power Bridge 10",
+            "Volkl Power Bridge 8",
+            "Volkl Quantum 1",
+            "Volkl Quantum 1 Powerboost",
+            "Volkl Quantum 10",
+            "Volkl Quantum 10 Tour",
+            "Volkl Quantum 3",
+            "Volkl Quantum 5 105",
+            "Volkl Quantum 5 110",
+            "Volkl Quantum 8",
+            "Volkl Quantum Force",
+            "Volkl Quantum Tour 10 MP Power Rap",
+            "Volkl Quantum Tour 8 Power Rap",
+            "Volkl Quantum V1 MP",
+            "Volkl Quantum V1 OS",
+            "Volkl Scorcher 5",
+            "Volkl Tour 10 93",
+            "Volkl Tour 10 MP",
+            "Volkl Tour 10 MP Gen II",
+            "Volkl Tour 10 V Engine Mid",
+            "Volkl Tour 10 V Engine MP",
+            "Volkl Tour 5",
+            "Volkl Tour 6",
+            "Volkl Tour 6 Gen II",
+            "Volkl Tour 7",
+            "Volkl Tour 8",
+            "Volkl Tour 8 Special Edition",
+            "Volkl Tour 8 V Engine MP",
+            "Volkl Tour 9",
+            "Volkl Tour 9 V Engine",
+            "Volkl Tour 9 V Engine (76 hole)",
+            "Volkl Tournament Pro",
+            "Volkl V1 Classic",
+            "Volkl V1 Classic",
+            "Volkl V1 Hot Spot",
+            "Volkl V1 Xtended",
+            "Volkl V5 Hot Spot",
+            "Volkl X2 OS Titanium",
+            "Volkl X4",
+            "Wilson Blade 98 - 2015 16x19",
+            "Wilson Blade 98 - 2015 18x20",
+            "Wilson Blade Ninety Eight",
+            "Wilson Blade Ninety Eight 16x19",
+            "Wilson Blade Ninety Eight 18x20",
+            "Wilson BLX Pro Open",
+            "Wilson Burn 100",
+            "Wilson Burn 100 - 18x20",
+            "Wilson Burn 100S",
+            "Wilson Federer Pro",
+            "Wilson H Blaze 95",
+            "Wilson H Cosmo 115",
+            "Wilson H Cyclone",
+            "Wilson H Rival 112",
+            "Wilson H Rival 96",
+            "Wilson H Tour (Hammer Tour) 95",
+            "Wilson H Tour 105",
+            "Wilson H Wave 100",
+            "Wilson H1 10",
+            "Wilson H1 Outer Edge 135",
+            "Wilson H2 (Hammer 2)",
+            "Wilson H4 (Hammer 4) OS (72 Holes)",
+            "Wilson H5 (Hammer 5) MP",
+            "Wilson H5 (Hammer 5) OS",
+            "Wilson H6",
+            "Wilson H6 (Hammer 6) MP",
+            "Wilson H6 (Hammer 6) OS",
+            "Wilson Hammer 3.0 Titanium Stretch",
+            "Wilson Hammer 3.2 Titanium Power Holes",
+            "Wilson Hammer 4.0 Stretch",
+            "Wilson Hammer 4.4 Titanium 110 Stretch",
+            "Wilson Hammer 4.4 Titanium 95 Stretch",
+            "Wilson Hammer 5.0 110",
+            "Wilson Hammer 5.0 110 Stretch",
+            "Wilson Hammer 5.0 95",
+            "Wilson Hammer 5.0 95 Stretch",
+            "Wilson Hammer 5.8 110",
+            "Wilson Hammer 5.8 95",
+            "Wilson Hammer 6.2",
+            "Wilson Hammer 6.2 110",
+            "Wilson Hammer 6.2 110 Stretch",
+            "Wilson Hammer 6.2 95",
+            "Wilson Hammer 6.2 95 Stretch",
+            "Wilson Hammer 6.4 Power Holes 110 Stretch",
+            "Wilson Hammer 6.4 Power Holes 95",
+            "Wilson Hammer 7.0 Titanium Stretch MP",
+            "Wilson Hammer 7.0 Titanium Stretch OS",
+            "Wilson Hammer 7.3 MP (100)",
+            "Wilson Hammer 7.3 OS 110",
+            "Wilson Hammer 7.4 110",
+            "Wilson Hammer 7.4 110 Stretch",
+            "Wilson Hammer 7.4 95",
+            "Wilson Hammer 7.4 95 Stretch",
+            "Wilson Hyper Hammer 2.3 Stretch OS",
+            "Wilson Hyper Hammer 2.3 Stretch Super OS",
+            "Wilson Hyper Hammer 2.6 Overdrive 115 with Rollers",
+            "Wilson Hyper Hammer 2.7 115",
+            "Wilson Hyper Hammer 2.8 125",
+            "Wilson Hyper Hammer 3.3 OS (115)",
+            "Wilson Hyper Hammer 3.3 SOS",
+            "Wilson Hyper Hammer 3.6 115 with Rollers",
+            "Wilson Hyper Hammer 4.0 100",
+            "Wilson Hyper Hammer 4.0 110",
+            "Wilson Hyper Hammer 4.3 PH MP",
+            "Wilson Hyper Hammer 4.3 PH OS",
+            "Wilson Hyper Hammer 5.2 106 OS",
+            "Wilson Hyper Hammer 5.2 MP 95",
+            "Wilson Hyper Hammer 5.3 Stretch MP",
+            "Wilson Hyper Hammer 5.3 Stretch OS",
+            "Wilson Hyper Hammer 5.6 Midsize with Rollers",
+            "Wilson Hyper Hammer 5.6 OS with Rollers",
+            "Wilson Hyper Hammer 5.9 MP 95",
+            "Wilson Hyper Hammer 5.9 OS 110",
+            "Wilson Hyper Hammer 6.2 110",
+            "Wilson Hyper Hammer 6.2 95",
+            "Wilson Hyper Hammer 6.3 MP",
+            "Wilson Hyper Hammer 6.3 OS",
+            "Wilson Hyper Hammer 6.6 with Rollers",
+            "Wilson Hyper Pro Staff 5.0 MP",
+            "Wilson Hyper Pro Staff 5.0 Stretch MP",
+            "Wilson Hyper Pro Staff 5.0 Stretch OS",
+            "Wilson Hyper Pro Staff 5.1 Surge",
+            "Wilson Hyper Pro Staff 5.1 Surge X MP",
+            "Wilson Hyper Pro Staff 6.1 106 Stretch",
+            "Wilson Hyper Pro Staff 6.1 95",
+            "Wilson Hyper Pro Staff 6.1 95 (Euro)",
+            "Wilson Hyper Pro Staff 6.1 95 Stretch",
+            "Wilson Hyper Pro Staff 6.5 MP",
+            "Wilson Hyper Pro Staff 6.5 OS",
+            "Wilson Hyper Pro Staff 7.6 with Rollers",
+            "Wilson Hyper Pro Staff Extreme 6.7 110",
+            "Wilson Hyper Pro Staff Extreme 6.7 95",
+            "Wilson Hyper Pro Staff ROK 102",
+            "Wilson Hyper Pro Staff ROK MP",
+            "Wilson Hyper Pro Staff Zone 7.1",
+            "Wilson Hyper Sledge Hammer 2.0 Stretch OS 115",
+            "Wilson Hyper Sledge Hammer 2.0 Stretch SOS 125",
+            "Wilson Juice  96",
+            "Wilson Juice 100 ",
+            "Wilson Juice 100S",
+            "Wilson K Four FX",
+            "Wilson K Fury",
+            "Wilson K Kobra Team FX",
+            "Wilson K Kobra Tour ",
+            "Wilson K One",
+            "Wilson K Pro Team FX",
+            "Wilson K Three FX",
+            "Wilson K Tour Team FX",
+            "Wilson K1 122",
+            "Wilson K3 115",
+            "Wilson K4 105",
+            "Wilson K4 112",
+            "Wilson KBlade 98",
+            "Wilson KBlade Team",
+            "Wilson KBlade Tour",
+            "Wilson KFive 108 OS",
+            "Wilson KFive 98 Mid+",
+            "Wilson KPro Open",
+            "Wilson KPro Staff",
+            "Wilson KPro Team FX",
+            "Wilson KPro Tour",
+            "Wilson KSix One 95",
+            "Wilson KSix One 95X",
+            "Wilson KSix One Team",
+            "Wilson KSix One Tour",
+            "Wilson KSix One Tour 90",
+            "Wilson KSix Two",
+            "Wilson KSting",
+            "Wilson KSurge",
+            "Wilson KTour",
+            "Wilson KZen 103",
+            "Wilson KZen Team",
+            "Wilson KZero",
+            "Wilson N Focus",
+            "Wilson n1",
+            "Wilson n1 Force",
+            "Wilson n2",
+            "Wilson n3",
+            "Wilson N3 Oversized",
+            "Wilson n4 Midplus (101)",
+            "Wilson n4 OS (111)",
+            "Wilson n5 (110)",
+            "Wilson n5 (98)",
+            "Wilson n5 Force 110",
+            "Wilson n5 Force 98",
+            "Wilson n6 (110)",
+            "Wilson n6 (95)",
+            "Wilson nBlade 106",
+            "Wilson nBlade 98",
+            "Wilson nFury 100",
+            "Wilson nFury 110",
+            "Wilson nPro 98",
+            "Wilson nPro Open",
+            "Wilson nPro Open X",
+            "Wilson nPro Surge",
+            "Wilson nPro Surge X",
+            "Wilson nPS 95",
+            "Wilson nSix One 95 (68 Holes)",
+            "Wilson nSix One 95 (76 Holes)",
+            "Wilson nSix One Tour",
+            "Wilson nSix Two 100",
+            "Wilson nSix Two 113",
+            "Wilson nTour 105",
+            "Wilson nTour 95",
+            "Wilson nTour Two  105",
+            "Wilson nTour Two 95",
+            "Wilson nVision",
+            "Wilson Pro Staff 4.7 EB Stretch 100",
+            "Wilson Pro Staff 4.7 EB Stretch 115",
+            "Wilson Pro Staff 5.7 EB Stretch 100",
+            "Wilson Pro Staff 5.7 EB Stretch 115",
+            "Wilson Pro Staff 5.9 110 Stretch",
+            "Wilson Pro Staff 5.9 95 Stretch",
+            "Wilson Pro Staff 6.0 Original Midsize 85",
+            "Wilson Pro Staff 6.0 Original MP (95)",
+            "Wilson Pro Staff 6.1 110 Stretch",
+            "Wilson Pro Staff 6.1 95",
+            "Wilson Pro Staff 6.1 95 Stretch",
+            "Wilson Pro Staff 6.6 Titanium MP",
+            "Wilson Pro Staff 6.6 Titanium OS",
+            "Wilson Pro Staff 7.0 Lite 110",
+            "Wilson Pro Staff 7.0 Lite 95",
+            "Wilson Pro Staff 7.5 95",
+            "Wilson Pro Staff 95",
+            "Wilson Pro Staff 97",
+            "Wilson Pro staff 97 RF",
+            "Wilson Pro staff 97 RF Autograph",
+            "Wilson Pro Staff Blitz",
+            "Wilson Pro Staff Largehead",
+            "Wilson Pro Staff Midsize",
+            "Wilson Pro Staff Torch MP 95",
+            "Wilson Pro Staff Torch OS 110",
+            "Wilson Pro Staff Tour 90",
+            "Wilson Pro Staff Tour 95",
+            "Wilson Pro Staff Trance MP 95",
+            "Wilson Pro Staff Trance OS 110",
+            "Wilson Profile 2.7 110",
+            "Wilson Profile Hammer 2.7 95",
+            "Wilson ProStaff 97 LS",
+            "Wilson Prostaff NCode Six One",
+            "Wilson SIx.One 95 Pro Staff",
+            "Wilson Six.One Pro Staff 100",
+            "Wilson Six.One Team",
+            "Wilson Sledge Hammer 2.8 Stretch (New)",
+            "Wilson Sledge Hammer 3.4 Stretch Limits",
+            "Wilson Sledge Hammer 3.8 112 (PH)",
+            "Wilson Sledge Hammer 3.8 112 Stretch PH",
+            "Wilson Sledge Hammer 3.8 98 (PH)",
+            "Wilson Steam ",
+            "Wilson Sting Graphit Lite",
+            "Wilson T3 MP 100",
+            "Wilson T4 110",
+            "Wilson Triad 2 SOS 118 (T2)",
+            "Wilson Triad 2.0 OS 115",
+            "Wilson Triad 2.0 w/ Rollers",
+            "Wilson Triad 3 OS 115 (T3)",
+            "Wilson Triad 3.0 110",
+            "Wilson Triad 3.0 110 Breast Cancer Awareness",
+            "Wilson Triad 3.0 OS 115",
+            "Wilson Triad 4.0 MP",
+            "Wilson Triad 4.0 OS",
+            "Wilson Triad 5",
+            "Wilson Triad 5 MP 98 (T5)",
+            "Wilson Triad 5 OS 110 (T5)",
+            "Wilson Triad 5.0 MP",
+            "Wilson Triad 5.0 OS",
+            "Wilson Triad 6.0 106",
+            "Wilson Triad Hammer 6.0 95",
+            "Wilson Triad Pro Staff 6.0 95",
+            "Wilson Two Trhee Lite",
+            "Wilson W2 Black Whisper",
+            "Wilson W2 Blue Shadow",
+            "Wilson W2 Spicy Ruby",
+            "Wilson W3 Gypsy Rose",
+            "Wilson W4 Cobalt Storm",
+            "Wilson W4 Red Fury",
+            "Wilson W4 Savage Lime",
+            "Wilson W4 Savage Sapphire",
+            "Wilson W5 Divine Iris",
+            "Wilson W6 Blue Steel",
+            "Wilson W6 Wild Crimson",
+            "Yonex Ezone AI 100",
+            "Yonex Ezone AI 98",
+            "Yonex Ezone DR 100",
+            "Yonex Ezone DR 98",
+            "Yonex MP 2i",
+            "Yonex MP 3i MP",
+            "Yonex MP 5i OS",
+            "Yonex MP Tour 1",
+            "Yonex MP Tour 198",
+            "Yonex MP Tour 5",
+            "Yonex MP Tour-1 XF",
+            "Yonex Muscle Power 5i MP",
+            "Yonex Muscle Power 7",
+            "Yonex NSRQ 5",
+            "Yonex NSRQ 7 100",
+            "Yonex NSRQ 7 110",
+            "Yonex NSRQ 8",
+            "Yonex Pro RD 70 Long 105",
+            "Yonex Pro RD 70 Long 95",
+            "Yonex RD 7",
+            "Yonex RD Power 10 Long 105",
+            "Yonex RD Power 10 Long 95",
+            "Yonex RD Power 6 Long",
+            "Yonex RD Power 7 Long 95",
+            "Yonex RD Ti 30 Long",
+            "Yonex RD Ti 40 Muscle Long",
+            "Yonex RD Ti 70 Long MP 98",
+            "Yonex RD Ti 70 Mid 88",
+            "Yonex RDS 001 Mid",
+            "Yonex RDS 001 Midplus",
+            "Yonex RDS 002",
+            "Yonex RDS 002 Tour",
+            "Yonex RDS 003 100",
+            "Yonex RDX 300 MP",
+            "Yonex RDX 300 Super Mid",
+            "Yonex RDX 500 HD",
+            "Yonex RDX 500 Mid",
+            "Yonex RDX 500 MP",
+            "Yonex RQ iS 1 Tour",
+            "Yonex RQ iS 1 Tour Light",
+            "Yonex RQ iS 1 Tour XL",
+            "Yonex RQ iS 1 Tour XL Lite",
+            "Yonex RQ iS 2 Tour",
+            "Yonex RQ Speed 30",
+            "Yonex RQS 11",
+            "Yonex RQS 22",
+            "Yonex RQS 33",
+            "Yonex RQS 55",
+            "Yonex Super RD Comp",
+            "Yonex Super RD Tour 90",
+            "Yonex Super RD Tour 95",
+            "Yonex Super RQ 1000 Long",
+            "Yonex Super RQ 300",
+            "Yonex Super RQ 300 Long",
+            "Yonex Super RQ 400 Long",
+            "Yonex Super RQ 450 Titanium Long",
+            "Yonex Super RQ 500",
+            "Yonex Super RQ 500 Long",
+            "Yonex Super RQ 700 Long",
+            "Yonex Super RQ Ti 350 Long",
+            "Yonex Super RQ Ti 380 Muscle Long",
+            "Yonex Super RQ Ti 600 Long",
+            "Yonex Super RQ Ti 700 Long",
+            "Yonex Super RQ Ti 800 Long",
+            "Yonex Super RQ Ti 800 Pro",
+            "Yonex Super RQ Ti 900 Long",
+            "Yonex Ultimum RD Ti 1000",
+            "Yonex Ultimum RD Ti 1200",
+            "Yonex Ultimum RD Ti 2000 Long SOS",
+            "Yonex Ultimum RD Ti 200m",
+            "Yonex Ultimum RD Ti 210m",
+            "Yonex Ultimum RD Ti 250m",
+            "Yonex Ultimum RD Ti 260m",
+            "Yonex Ultimum RD Ti 50",
+            "Yonex Ultimum RD Ti 50 Long",
+            "Yonex Ultimum RD Ti 80",
+            "Yonex Ultimum Ti 1500 OS",
+            "Yonex Ultimum Ti 1700 MP",
+            "Yonex Ultimum Ti 1700 OS",
+            "Yonex Ultimum Ti 2000 OS",
+            "Yonex URQ Speed 8",
+            "Yonex VCon 15",
+            "Yonex VCon 17 100",
+            "Yonex VCon 17 107",
+            "Yonex VCon 20 107",
+            "Yonex VCon 20 117",
+            "Yonex VCon 30+ 107",
+            "Yonex VCon 30+ 117",
+            "Yonex Vcore 95 D",
+            "Yonex Vcore 97 Tour F",
+            "Yonex Vcore 97 Tour G",
+            "Yonex VCore Duel G 100",
+            "Yonex VCore Duel G 97",
+            "Yonex Vcore Si 100",
+            "Yonex Vcore Si 98"
+        ];
+
+        /*
+        $("#r1").autocomplete({
+            source: availableTags
+        });
+        $("#r1-modal-raquete").autocomplete({
+            source: availableTags
+        });
+        $("#r2").autocomplete({
+            source: availableTags
+        });
+        */
+    });
+</script>
+
+
+<script>
+    $(function () {
+        var availableTags = [
+            "Select a string",
+            "Alpha Head Lynx (16)",
+            "Ashaway Power Nick 18 (18)",
+            "Babolat Addiction 16 (16)",
+            "Babolat Pro Extreme 1.25mm (17)",
+            "Babolat Pro Extreme 1.30mm (16)",
+            "Babolat Revenge 16 (16)",
+            "Babolat RPM Blast 16 (15)",
+            "Babolat RPM Blast 17 (15)",
+            "Babolat RPM Blast 18 (18)",
+            "Babolat RPM Team (16L)",
+            "Babolat RPM Team 17 (17)",
+            "Babolat Spiraltek 1.25mm (17)",
+            "Babolat Spiraltek 1.30mm (16)",
+            "Babolat Synthetic Gut 16 (16)",
+            "Babolat Synthetic Gut 17 (17)",
+            "Babolat VS Team 17 (17)",
+            "Babolat VS Touch 15L (15L)",
+            "Babolat VS Touch 16 (16)",
+            "Dunlop Black Widow (16)",
+            "Dunlop Black Widow (17)",
+            "Dunlop Hexy Fibe (17)",
+            "Gamma Glide 1.30mm (16)",
+            "Gamma Live Wire Professional 16 (16)",
+            "Gamma Live Wire Professional 17 (17)",
+            "Gamma Live Wire Professional 18 (18)",
+            "Gamma Live Wire XP 16 (16)",
+            "Gamma Live Wire XP 17 (17)",
+            "Gamma Moto (17)",
+            "Gamma Moto 1.29mm (16)",
+            "Gamma Revelation 16 (16)",
+            "Gamma Revelation 17 (17)",
+            "Gamma Stinger 1.30mm (16)",
+            "Gamma Synthetic Gut (16)",
+            "Gamma TNT2 16 (16)",
+            "Gamma TNT2 17 (17)",
+            "Gamma TNT2 18 (18)",
+            "Gamma Zo Magic (16)",
+            "Gamma Zo Magic 1.23mm (17)",
+            "Gioco Grand Slam 1.17mm (18)",
+            "Gioco Grand Slam 1.25mm (17)",
+            "Gioco Grand Slam 1.30mm (16)",
+            "Gioco Sensazione 1.30mm (16)",
+            "Gioco Vantaggio 1.30mm (16)",
+            "Hacker Gear Spin (16)",
+            "Head Hawk 3 (17)",
+            "Kirschbaum Competition 1.25 (16)",
+            "Kirschbaum Competition 1.30 (16)",
+            "Kirschbaum Max.Power Rough 1.30 mm (16)",
+            "Klip Armour Pro 16 (16)",
+            "Klip Armour Pro 17 (17)",
+            "Klip Legend Natural Gut 16 (16)",
+            "Klip Legend Natural Gut 17 (17)",
+            "Klip Legend Natural Gut 18 (18)",
+            "Klip Legend Uncoated Natural Gut 15L (15L)",
+            "Klip Legend Uncoated Natural Gut 16 (16)",
+            "Klip Legend Uncoated Natural Gut 17 (17)",
+            "Klip Pro Natural Gut (17)",
+            "Klip Pro Natural Gut (16)",
+            "Klip Pro Natural Gut Legend (17)",
+            "Luxilon 4G (17)",
+            "Luxilon 4G (16)",
+            "Luxilon Adrenaline (16L)",
+            "Luxilon Adrenaline 1.15 (18)",
+            "Luxilon Adrenaline 1.25 (16L)",
+            "Luxilon Adrenaline Rough 1,25 mm (17)",
+            "Luxilon Big Banger ALU Power 16L (16L)",
+            "Luxilon Big Banger ALU Power Flouro 17 (17)",
+            "Luxilon Big Banger ALU Power Rough 16L (16L)",
+            "Luxilon Big Banger Original 16  (16)",
+            "Luxilon Savage (16)",
+            "Luxilon Savage Black (16)",
+            "Luxilon Savage White (16)",
+            "Pacific Poly Force (17)",
+            "Pacific Tough Gut 16 (16)",
+            "Pacific X Force 18 (18)",
+            "Prince Beast XP (17)",
+            "Prince Tour XC (15L)",
+            "Sigma Torunament 1.35mm (15)",
+            "Signum Pro Tournament 1.35mm (15)",
+            "Solinco Outlast 1.30mm (16)",
+            "Solinco Tour Bite 1.25 (16L)",
+            "Tecnifibre X-One Biphase 17 (17)",
+            "Toalson L.E.O 1.35mm (15)",
+            "Toalson Polygut 1.25mm (17)",
+            "Toalson Polygut 1.30mm (16)",
+            "Toalson Rencon 1.20mm (17)",
+            "Toalson Ultrasoft 1.30mm (16)",
+            "Topspin Cyber Blue 1.20mm (17L)",
+            "Topspin Cyber Blue 17 (17)",
+            "Topspin Cyber Delta 1.25mm (17)",
+            "Topspin Cyber Delta Twirl 1.25mm (17)",
+            "Topspin Cyber Flash 1.25 (16L)",
+            "Topspin Sence Seven (16)",
+            "Topspin Sence Seven (16)",
+            "Wilson Extreme Octane (16)",
+            "Wilson Hollow Core 16 (16)",
+            "Wilson NXT 15L (15L)",
+            "Wilson NXT 16 (16)",
+            "Wilson NXT 17 (17)",
+            "Wilson Poly Pro (16)",
+            "Wilson Red Alert 1.30mm (16)",
+            "Wilson Sensation 16 (16)",
+            "Wilson Sensation 17 (17)",
+            "Wilson Shock Shield Mono 1.25mm (17)",
+            "Wilson Spin Cycle (16)",
+            "Wilson Spin Duo (16)",
+            "Wilson Stamina 16 (16)",
+            "Wilson Ultra Synthetic Gut 16 (16)",
+            "Yonex Multi - Sensa (16)",
+            "Yonex Poly Tour 125 16 (16L)",
+            "Yonex Poly Tour Spin 1.25mm (16L)",
+            "Zons Poly Blast (16)"
+        ];
+        /*
+        $("#r1-m").autocomplete({
+            source: availableTags
+        });
+        $("#r1-c").autocomplete({
+            source: availableTags
+        });
+        $("#r2-m").autocomplete({
+            source: availableTags
+        });
+        $("#r2-c").autocomplete({
+            source: availableTags
+        });
+        */
+    });
+</script>
+</body>
+</html>

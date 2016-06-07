@@ -1,0 +1,1 @@
+!function(){"use strict";function a(a,b){a.init=function(){},a.init()}angular.module("raquetes").controller("ApplicationController",a),a.$inject=["$scope","$rootScope"]}(),function(){"use strict";function a(a,b){a.init=function(){a.carregarDados()},a.carregarDados=function(){},a.init()}angular.module("raquetes").controller("MainController",a),a.$inject=["$scope","$rootScope"]}();
