@@ -8,21 +8,23 @@ set hlsearch
 set incsearch
 set t_Co=256
 syntax on
+set syntax=whitespace
+
 set background=dark
 
 " size of a hard tabstop
-set tabstop=4
+"set tabstop=4
 
 " size of an "indent"
-set shiftwidth=4
+"set shiftwidth=4
 
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
+"set softtabstop=4
 
 " always uses spaces instead of tab characters
-set expandtab
-
+"set expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -216,15 +218,25 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Plugin 'flazz/vim-colorschemes'
 
 
 " Lean & mean statusline for vim that's light as air
 Plugin 'bling/vim-airline'
 
-let g:airline_powerline_fonts = 1
 
-let g:airline_symbols        = {}
-let g:airline_symbols.branch = 'î '
+Plugin 'nrocco/vim-phplint'
+
+noremap <C-l> :Phplint<CR></CR>
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"let g:airline_symbols        = {}
+"let g:airline_symbols.branch = 'î '
 
 let g:airline_section_b                       = '%{fugitive#head()}'
 let g:airline#extensions#branch#empty_message = ''
@@ -232,7 +244,7 @@ let g:airline#extensions#branch#empty_message = ''
 call vundle#end()            " required
 
 "MAPEIA CONTROL S PARA SALVAR ARQUIVO (COMO UTF 8)
-map!  <c-s> :w ++enc=utf-8<cr>
+map  <c-s> :w ++enc=utf-8<cr>
 
 
 "MAPEIA PARA ABRIR O FILE EXPLORER
@@ -245,6 +257,33 @@ map <C-n> :NERDTreeToggle<CR>
 :map <S-Tab> :bprevious<CR>
 :map <S-w> :bd<CR>
 
+colorscheme brogrammer
 
-:ab ustrc 'use strict';
+
+if has("win32")
+	"Windows options here
+	if has('gui_running')
+		set guifont=Consolas:h10
+	endif
+else
+	if has("unix")
+		let s:uname = system("uname")
+		if s:uname == "Darwin\n"
+			"Specific Mac options here
+		else
+			"Specific linux instructions here
+		endif
+	endif
+endif
+
+"https://sites.google.com/site/chamindra02/marvim - DOCUMENTACAO
+"let marvim_store = '~/marvim/'
+let marvim_find_key = '<Space>' 
+let marvim_store_key = 'ms' 
+"let marvim_register = 'c' 
+
+
+for f in split(glob('~/.vim/custom/*.vim'), '\n')
+    exe 'source' f
+endfor
 
