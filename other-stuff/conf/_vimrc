@@ -255,7 +255,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 :map <Tab> :bnext<CR>
 :map <S-Tab> :bprevious<CR>
-:map <S-w> :bd<CR>
+
+" MAPEIA SHIFT-W PARA ESCREVER O ARQUIVO, FECHAR O BUFFER E MANTER A JANELA
+" ABERTA!
+
+map <S-w> :bp<bar>sp<bar>bn<bar>bd<CR>. 
 
 colorscheme brogrammer
 
