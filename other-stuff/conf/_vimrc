@@ -1,6 +1,6 @@
 
-set encoding=UTF-8
-set fileencodings=UTF-8
+set encoding=utf-8
+set fileencodings=utf-8
 
 set ai
 set nu
@@ -10,6 +10,9 @@ set t_Co=256
 syntax on
 set syntax=whitespace
 
+
+
+set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
 set background=dark
 
 " size of a hard tabstop
@@ -116,7 +119,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 
-Plugin 'itchyny/lightline.vim'
+"""Plugin 'itchyny/lightline.vim'
 
 Plugin 'Shougo/neocomplcache.vim'
 
@@ -221,25 +224,58 @@ Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 
 
-" Lean & mean statusline for vim that's light as air
-Plugin 'bling/vim-airline'
-
 
 Plugin 'nrocco/vim-phplint'
-
 noremap <C-l> :Phplint<CR></CR>
 
-let g:airline_powerline_fonts = 1
+
+" Lean & mean statusline for vim that's light as air
+Plugin 'vim-airline/vim-airline'
+nmap <F8> :TagbarToggle<CR>
+
+"Plugin 'vim-airline/vim-airline-themes'
+
+"let g:airline_theme = 'powerlineish'
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" vim-airline
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_powerline_fonts = 1
+
+" vim-airline
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_left_sep          = '▶'
+let g:airline_left_alt_sep      = '»'
+let g:airline_right_sep         = '◀'
+let g:airline_right_alt_sep     = '«'
+let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
+let g:airline#extensions#readonly#symbol   = '⊘'
+let g:airline#extensions#linecolumn#prefix = '¶'
+let g:airline#extensions#paste#symbol      = 'ρ'
+let g:airline_symbols.linenr    = '␊'
+let g:airline_symbols.branch    = '⎇'
+let g:airline_symbols.paste     = 'ρ'
+let g:airline_symbols.paste     = 'Þ'
+let g:airline_symbols.paste     = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
 
-"let g:airline_symbols        = {}
-"let g:airline_symbols.branch = 'î '
-
-let g:airline_section_b                       = '%{fugitive#head()}'
-let g:airline#extensions#branch#empty_message = ''
+Plugin 'craigemery/vim-autotag'
+Plugin 'shougo/vimshell.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'mklabs/grunt.vim'
+Plugin 'eugen0329/vim-esearch'
 
 call vundle#end()            " required
 
@@ -256,6 +292,20 @@ map <C-n> :NERDTreeToggle<CR>
 :map <Tab> :bnext<CR>
 :map <S-Tab> :bprevious<CR>
 
+
+
+
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
 " MAPEIA SHIFT-W PARA ESCREVER O ARQUIVO, FECHAR O BUFFER E MANTER A JANELA
 " ABERTA!
 
@@ -270,20 +320,16 @@ if has("win32")
 		set guifont=Consolas:h10
 	endif
 else
-	if has("unix")
-		let s:uname = system("uname")
-		if s:uname == "Darwin\n"
-			"Specific Mac options here
-		else
-			"Specific linux instructions here
-		endif
+	if has('gui_running')
+        set guifont=Source\ Code\ Pro\ for\ Powerline
 	endif
 endif
 
+
 "https://sites.google.com/site/chamindra02/marvim - DOCUMENTACAO
 "let marvim_store = '~/marvim/'
-let marvim_find_key = '<Space>' 
-let marvim_store_key = 'ms' 
+"let marvim_find_key = '<Space>' 
+"let marvim_store_key = 'ms' 
 "let marvim_register = 'c' 
 
 
