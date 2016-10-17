@@ -12,7 +12,6 @@ set syntax=whitespace
 
 
 
-set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
 set background=dark
 
 " size of a hard tabstop
@@ -82,7 +81,8 @@ Plugin 'scrooloose/syntastic'
 " This does what it says on the tin. It will check your file on open too, not just on save.
 " You might not want this, so just leave it out if you don't.
 let g:syntastic_check_on_open=1
-
+" use jshint
+let g:syntastic_javascript_checkers = ['jshint']
 
 
 "Plugin 'Valloric/YouCompleteMe'
@@ -217,12 +217,13 @@ let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
 "MAPEAMENTOS
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
-
 
 
 Plugin 'nrocco/vim-phplint'
@@ -277,6 +278,15 @@ Plugin 'xolox/vim-easytags'
 Plugin 'mklabs/grunt.vim'
 Plugin 'eugen0329/vim-esearch'
 
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 call vundle#end()            " required
 
 "MAPEIA CONTROL S PARA SALVAR ARQUIVO (COMO UTF 8)
@@ -293,7 +303,22 @@ map <C-n> :NERDTreeToggle<CR>
 :map <S-Tab> :bprevious<CR>
 
 
+"<Ctrl-X> -- cut (goto visual mode and cut)
+imap <C-X> <C-O>vgG
+vmap <C-X> "*x<Esc>i
 
+"<Ctrl-C> -- copy (goto visual mode and copy)
+imap <C-C> <C-O>vgG
+vmap <C-C> "*y<Esc>i
+
+"<Ctrl-A> -- copy all
+imap <C-A> <C-O>gg<C-O>gH<C-O>G<Esc>
+vmap <C-A> <Esc>gggH<C-O>G<Esc>i
+
+"<Ctrl-V> -- paste
+nm \\paste\\ "=@*.'xy'<CR>gPFx"_2x:echo<CR>
+imap <C-V> x<Esc>\\paste\\"_s
+vmap <C-V> "-cx<Esc>\\paste\\"_x
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -306,10 +331,13 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
+
+set backspace=indent,eol,start
+
 " MAPEIA SHIFT-W PARA ESCREVER O ARQUIVO, FECHAR O BUFFER E MANTER A JANELA
 " ABERTA!
 
-map <S-w> :bp<bar>sp<bar>bn<bar>bd<CR>. 
+map <S-x> :bp<bar>sp<bar>bn<bar>bd<CR> 
 
 colorscheme brogrammer
 
@@ -328,12 +356,14 @@ endif
 
 "https://sites.google.com/site/chamindra02/marvim - DOCUMENTACAO
 "let marvim_store = '~/marvim/'
-"let marvim_find_key = '<Space>' 
-"let marvim_store_key = 'ms' 
+let marvim_find_key = '<S-Space>' 
+let marvim_store_key = 'ms' 
 "let marvim_register = 'c' 
+
 
 
 for f in split(glob('~/.vim/custom/*.vim'), '\n')
     exe 'source' f
 endfor
 
+map <silent> <F3> :call BufferList()<CR>
