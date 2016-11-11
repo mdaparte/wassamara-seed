@@ -221,7 +221,7 @@ let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "Plugin 'tomtom/tlib_vim'
 "Plugin 'garbas/vim-snipmate'
 
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'flazz/vim-colorschemes'
 
@@ -270,14 +270,15 @@ let g:airline_symbols.paste     = 'Þ'
 let g:airline_symbols.paste     = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-Plugin 'craigemery/vim-autotag'
+"Plugin 'craigemery/vim-autotag'
 Plugin 'shougo/vimshell.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'mklabs/grunt.vim'
+"Plugin 'xolox/vim-easytags'
+"Plugin 'mklabs/grunt.vim'
 Plugin 'eugen0329/vim-esearch'
 
+let g:easytags_async = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -295,6 +296,14 @@ map  <c-s> :w ++enc=utf-8<cr>
 
 "MAPEIA PARA ABRIR O FILE EXPLORER
 map <C-n> :NERDTreeToggle<CR>
+
+
+
+map <F12> :tabnext<cr>
+map <F11> :tabprevious<cr>
+map <F9>  :tabnew<cr>
+map <F10> :tabclose<cr>
+
 
 "map <TAB> <ESC>gt<CR> 
 "map <S-TAB> <ESC>gT<CR>
@@ -337,15 +346,19 @@ set backspace=indent,eol,start
 " MAPEIA SHIFT-W PARA ESCREVER O ARQUIVO, FECHAR O BUFFER E MANTER A JANELA
 " ABERTA!
 
-map <S-x> :bp<bar>sp<bar>bn<bar>bd<CR> 
+map <S-w> :bp<bar>sp<bar>bn<bar>bd<CR> 
 
-colorscheme brogrammer
+"colorscheme brogrammer
+colorscheme antares
 
 
 if has("win32")
 	"Windows options here
 	if has('gui_running')
-		set guifont=Consolas:h10
+		let $TMP="c:/tmp/"
+		set directory=.,$TMP,$TEMP
+		"set guifont=Consolas:h10 
+		set guifont=Fira\ Mono\ for\ Powerline:h11
 	endif
 else
 	if has('gui_running')
@@ -361,9 +374,33 @@ let marvim_store_key = 'ms'
 "let marvim_register = 'c' 
 
 
-
 for f in split(glob('~/.vim/custom/*.vim'), '\n')
     exe 'source' f
 endfor
 
 map <silent> <F3> :call BufferList()<CR>
+
+
+
+"------------------------- DESABILITANDO SETAS!-------------------------
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
+"-----------------------------MAPPINGS ----------------------------------
+"PARA EDITAR O ARQUIVO VIMRC
+nmap <Leader>ev :tabedit ~\_vimrc<cr>
+
+
+"PARA LIMPAR O HIGHLIGHT DO SEARCH
+nmap <Leader><space> :nohlsearch<cr>
+
+augroup autosourcing
+	autocmd!
+	autocmd BufWritePost _vimrc source ~\_vimrc
+augroup END
